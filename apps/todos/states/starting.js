@@ -9,7 +9,7 @@
 //
 Todos.STARTING = SC.State.design({
   enterState: function() {
-    if (Todos.get('storeType') === 'SomeBackendDatasource') {
+    if (Todos.get('storeType') === 'FromSomeBackendDatasource') {
       this.gotoState('LOGGING_IN');
     } else if (Todos.get('storeType') === 'FromFixtures') {
       this.gotoState('LOADING_APP');
