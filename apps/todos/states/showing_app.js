@@ -4,15 +4,15 @@
 // ==========================================================================
 /*globals Todos */
  
-// The mainPage view is now showing, after being appended in the LOADING_APP state.
-// So now we are in the SHOWING_APP state, waiting for and responding to user actions.
-//
 Todos.SHOWING_APP = SC.State.design({
   enterState: function() {
-    // There could be a user interface update for ready status after loading,
-    // such as a status indicator that turns from a yellow to green light, but
-    // we don't have anything fancy like that. So, nothing to worry about. Just
-    // stand at the ready.
+    // Show the mainPage view by appending it.
+    //
+    Todos.getPath('mainPage.mainPane').append();
+
+    // Put keyboard focus on the new todos item.
+    //
+    Todos.mainPage.getPath('mainPane.newTodoField.field').becomeFirstResponder();
   },
 
   exitState: function() {

@@ -5,14 +5,14 @@
 /*globals Todos */
  
 // For the Todos app, storeType will be 'FromFixtures', so we will
-// go directly to the LOADING_APP state, to prepare for showing the app.
+// go directly to the LOADING_DATA state, to prepare for showing the app.
 //
 Todos.STARTING = SC.State.design({
   enterState: function() {
     if (Todos.get('storeType') === 'FromSomeBackendDatasource') {
       this.gotoState('LOGGING_IN');
     } else if (Todos.get('storeType') === 'FromFixtures') {
-      this.gotoState('LOADING_APP');
+      this.gotoState('LOADING_DATA');
     }
   },
  
