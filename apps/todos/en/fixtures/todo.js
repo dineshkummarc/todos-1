@@ -4,16 +4,21 @@ Todos.Todo.FIXTURES = [
  {
    guid: 0,
    isCompleted: YES,
-   title: 'Take out the garbage'
+   title: 'Add a READY_APP state'
  },
  {
    guid: 1,
    isCompleted: YES,
-   title: 'Walk the dog'
+   title: 'Edit the buildfile'
  },
  {
    guid: 2,
    isCompleted: YES,
-   title: 'Wash the dishes'
+   title: 'Add a todos app'
+ },
+ {
+   guid: 3,
+   isCompleted: YES,
+   title: 'Install SproutCore'
  }
 ];
