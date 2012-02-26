@@ -4,7 +4,7 @@ Todos.Todo.FIXTURES = [
  {
    guid: 0,
    isCompleted: YES,
-   title: 'Add a READY_APP state'
+   title: 'Add a SHOWING_APP state'
  },
  {
    guid: 1,
