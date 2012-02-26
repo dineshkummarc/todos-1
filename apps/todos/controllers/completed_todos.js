@@ -1,4 +1,4 @@
-require('controllers/todo');
+require('controllers/todos');
 
 // The todo manager is a list of all todo items that have `isCompleted` set to `YES`.
 Todos.completedTodosController = SC.ArrayController.create({
