@@ -13,6 +13,7 @@ Todos.mainPage = SC.Page.design({
   // load.
   mainPane: SC.MainPane.design({
     childViews: ['header', 'newTodoField', 'todosList', 'footer'],
+    defaultResponder: "Todos.statechart", 
 
     header: SC.ToolbarView.design({
       layout: { centerX: 0, width: 500, top: 0, height: 36 },
@@ -54,7 +55,6 @@ Todos.mainPage = SC.Page.design({
         layout: { right: 12, height: 30, centerY: 0, zIndex: 100 },
         localize: YES,
         title: '_Add',
-        target: 'Todos.todosController',
         action: 'addTodo',
         valueBinding: '.parentView.field.value',
         isDefaultBinding: '.parentView.field*focused'
@@ -80,7 +80,6 @@ Todos.mainPage = SC.Page.design({
         isEnabledBinding: SC.Binding.oneWay('Todos.completedTodosController.length').bool(),
         localize: YES,
         title: '_Clear completed todos',
-        target: 'Todos.completedTodosController',
         action: 'clearCompletedTodos'
       })
     })
