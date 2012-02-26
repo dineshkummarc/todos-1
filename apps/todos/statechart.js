@@ -77,8 +77,8 @@ Todos.statechart = SC.Statechart.create({
         //
         Todos.mainPage.getPath('mainPane.newTodoField.field').becomeFirstResponder();
 
-        // Done with loading and initialization steps. Move to READY_APP.
-        this.gotoState('READY_APP');
+        // Done with loading and initialization steps. Move to SHOWING_APP.
+        this.gotoState('SHOWING_APP');
       },
  
       exitState: function() {
@@ -87,9 +87,9 @@ Todos.statechart = SC.Statechart.create({
     }),
      
     // The mainPage view is now showing, after being appended in the LOADING_APP state.
-    // So now we are in the READY state, waiting for and responding to user actions.
+    // So now we are in the SHOWING_APP state, waiting for and responding to user actions.
     //
-    READY_APP: SC.State.design({
+    SHOWING_APP: SC.State.design({
       enterState: function() {
         // There could be a user interface update for ready status after loading,
         // such as a status indicator that turns from a yellow to green light, but
