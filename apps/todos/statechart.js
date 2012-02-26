@@ -123,6 +123,16 @@ Todos.statechart = SC.Statechart.create({
           });
           view.set('value', '');
         }
+      },
+
+      // Destroys all todo items that are completed.
+      //
+      // This action method is tied to a button in the mainPage view's bottom
+      // toolbar. This button has its action property set to 'clearCompletedTodos',
+      // so when the user clicks it, this function is called.
+      //
+      clearCompletedTodos: function () {
+        Todos.completedTodosController.invoke('destroy');
       }
     })
 
