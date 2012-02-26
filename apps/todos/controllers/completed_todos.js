@@ -4,12 +4,12 @@ require('controllers/todo');
 Todos.completedTodosController = SC.ArrayController.create({
 
   // The total number of Todos
-  totalTodosBinding: SC.Binding.oneWay('Todos.todoController.length'),
+  totalTodosBinding: SC.Binding.oneWay('Todos.todosController.length'),
 
   // Whether all items in the Todo list are completed
   areAllCompleted: function (k, v) {
     if (v !== undefined) {
-      Todos.todoController.setEach('isCompleted', v);
+      Todos.todosController.setEach('isCompleted', v);
     }
     return this.get('length') === this.get('totalTodos');
   }.property('length', 'totalTodos').cacheable()
