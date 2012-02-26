@@ -29,7 +29,7 @@ Todos.mainPage = SC.Page.design({
       title: SC.LabelView.design({
         layout: { left: 0, right: 0, top: 0, bottom: 0 },
 
-        totalTodoBinding: SC.Binding.oneWay('Todos.todoController.length'),
+        totalTodoBinding: SC.Binding.oneWay('Todos.todosController.length'),
         completedTodosBinding: SC.Binding.oneWay('Todos.completedTodosController.length'),
 
         value: function () {
@@ -54,7 +54,7 @@ Todos.mainPage = SC.Page.design({
         layout: { right: 12, height: 30, centerY: 0, zIndex: 100 },
         localize: YES,
         title: '_Add',
-        target: 'Todos.todoController',
+        target: 'Todos.todosController',
         action: 'addTodo',
         valueBinding: '.parentView.field.value',
         isDefaultBinding: '.parentView.field*focused'
@@ -64,12 +64,12 @@ Todos.mainPage = SC.Page.design({
     todosList: SC.ScrollView.design({
       layout: { centerX: 0, width: 500, top: 72, bottom: 36 },
       contentView: SC.ListView.design({
-        contentBinding: SC.Binding.oneWay('Todos.todoController'),
+        contentBinding: SC.Binding.oneWay('Todos.todosController'),
         rowHeight: 36,
         exampleView: Todos.TodoItemView
       })
     }),
-
+        
     footer: SC.ToolbarView.design({
       layout: { centerX: 0, width: 500, bottom: 0, height: 36 },
 
