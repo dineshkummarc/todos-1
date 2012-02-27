@@ -5,7 +5,9 @@
 /*globals Todos */
  
 Todos.main = function main() {
-  Todos.statechart.initStatechart();
+  var statechart = Todos.statechart;
+  SC.RootResponder.responder.set('defaultResponder', statechart); 
+  statechart.initStatechart();
 };
  
 function main() { Todos.main(); }
