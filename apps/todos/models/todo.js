@@ -1,3 +1,4 @@
+require('core');
 
 // A simple SproutCore model that describes
 // the semantics of something that needs to be done.
